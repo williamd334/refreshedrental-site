@@ -149,8 +149,11 @@
   .contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 48px; align-items: start; }
   .contact-side p { color: #c9d8ea; margin: 0 0 24px; }
   .contact-side .btns { display: flex; flex-direction: column; gap: 12px; max-width: 280px; }
-  .contact-side .email { margin-top: 24px; font-size: 15px; color: #c9d8ea; }
-  .contact-side .email a { color: var(--white); }
+  .direct { border: 1px solid rgba(255,255,255,0.25); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 20px; }
+  .direct-label { font-size: 14px; color: #c9d8ea; margin-bottom: 6px; }
+  .direct-email { display: inline-block; font-size: 22px; font-weight: 600; color: var(--white); text-decoration: underline; text-underline-offset: 4px; text-decoration-color: rgba(255,255,255,0.4); word-break: break-all; }
+  .direct-email:hover { text-decoration-color: var(--white); }
+  .direct-note { margin-top: 6px; font-size: 14px; color: #9cc0ec; }
   form { background: var(--white); color: var(--text); border-radius: var(--radius); padding: 28px; display: grid; gap: 14px; }
   .row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
   label { display: block; font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
@@ -413,14 +416,17 @@
           <h2>Let's talk about your property.</h2>
         </div>
         <p>Every property is different. Tell us a little about what's going on, and we'll reach out to talk it through and figure out what makes sense.</p>
+        <div class="direct">
+          <div class="direct-label">Rather skip the form? Email us directly.</div>
+          <a class="direct-email" href="mailto:bill@refreshedrental.com?subject=Question%20about%20my%20property">bill@refreshedrental.com</a>
+          <div class="direct-note">We reply within a few hours.</div>
+        </div>
         <div class="btns">
           <a class="btn btn-light" href="tel:0000000">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
             Call us
           </a>
-          <a class="btn btn-ghost-light" href="mailto:bill@refreshedrental.com?subject=Question%20about%20my%20property">Email us</a>
         </div>
-        <div class="email">Or write to <a href="mailto:bill@refreshedrental.com">bill@refreshedrental.com</a></div>
       </div>
 
       <!-- Form submissions are delivered to bill@refreshedrental.com through Formspree.
@@ -453,7 +459,7 @@
         <input type="hidden" name="_subject" value="New inquiry from refreshedrental.com">
         <input type="text" name="_gotcha" class="hidden" tabindex="-1" autocomplete="off">
         <button class="btn btn-primary" type="submit">Get in touch</button>
-        <p class="form-note" id="form-status">We usually reply the same day.</p>
+        <p class="form-note" id="form-status">We reply within a few hours.</p>
       </form>
     </div>
   </section>
@@ -463,7 +469,6 @@
 <footer>
   <div class="wrap">
     <span>&copy; 2026 Refreshed Rental LLC &middot; Seattle, WA</span>
-    <span><a href="mailto:bill@refreshedrental.com">bill@refreshedrental.com</a></span>
   </div>
 </footer>
 
